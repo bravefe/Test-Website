@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import heroImg from '../assets/hero.png'
-import viteLogo from '../assets/vite.svg'
-import vueLogo from '../assets/vue.svg'
+import { ref } from "vue";
+import heroImg from "../assets/hero.png";
+import viteLogo from "../assets/vite.svg";
+import vueLogo from "../assets/vue.svg";
 
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template>
@@ -17,6 +17,8 @@ const count = ref(0)
     <div>
       <h1>Get started</h1>
       <p>Edit <code>src/App.vue</code> and save to test <code>HMR</code></p>
+      <p v-if="count > 5">More than 5 times.</p>
+      <p v-else>Less than 5 times.</p>
     </div>
     <button type="button" class="counter" @click="count++">
       Count is {{ count }}
